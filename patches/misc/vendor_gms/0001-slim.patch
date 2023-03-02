@@ -1,0 +1,76 @@
+From 76f86b270c1c01d1f156a376dabeea287b74e45d Mon Sep 17 00:00:00 2001
+From: TheAtt1la <alittauwu@gmail.com>
+Date: Wed, 1 Mar 2023 23:51:48 +0100
+Subject: [PATCH] slim
+
+---
+ common/common-vendor.mk | 20 --------------------
+ 1 file changed, 20 deletions(-)
+
+diff --git a/common/common-vendor.mk b/common/common-vendor.mk
+index 2b45ef1..f612eb3 100644
+--- a/common/common-vendor.mk
++++ b/common/common-vendor.mk
+@@ -85,25 +85,12 @@ PRODUCT_COPY_FILES += \
+     vendor/gms/common/proprietary/system/etc/permissions/privapp-permissions-google.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-google.xml \
+     vendor/gms/common/proprietary/system_ext/etc/permissions/privapp-permissions-google-se.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-google-se.xml
+ 
+-# Recorder
+-ifeq ($(TARGET_SUPPORTS_GOOGLE_RECORDER),true)
+-PRODUCT_PACKAGES += \
+-    RecorderPrebuilt
+-endif
+-
+ # arcore
+ ifeq ($(TARGET_INCLUDE_STOCK_ARCORE),true)
+ PRODUCT_PACKAGES += \
+     arcore
+ endif
+ 
+-# Live Wallpapers
+-ifeq ($(TARGET_INCLUDE_LIVE_WALLPAPERS),true)
+-PRODUCT_PACKAGES += \
+-    PixelLiveWallpaperPrebuilt \
+-    PixelWallpapers2020
+-endif
+-
+ # NGA
+ ifeq ($(TARGET_SUPPORTS_NEXT_GEN_ASSISTANT), true)
+ PRODUCT_PACKAGES += \
+@@ -122,25 +109,19 @@ PRODUCT_PACKAGES += \
+     TagGoogle \
+     CalculatorGooglePrebuilt \
+     CalendarGooglePrebuilt \
+-    Chrome-Stub \
+     DevicePolicyPrebuilt \
+     GoogleContacts \
+-    GoogleTTS \
+     LatinIMEGooglePrebuilt \
+     LocationHistoryPrebuilt \
+-    Maps \
+     MarkupGoogle \
+     ModuleMetadataGoogle \
+-    Photos \
+     PixelThemesStub \
+     PrebuiltDeskClockGoogle \
+-    PrebuiltGmail \
+     SoundAmplifierPrebuilt \
+     SoundPickerPrebuilt \
+     TrichromeLibrary-Stub \
+     WebViewGoogle-Stub \
+     talkback \
+-    AndroidAutoStubPrebuilt \
+     ConfigUpdater \
+     DeviceIntelligenceNetworkPrebuilt \
+     DevicePersonalizationPrebuiltPixel2020 \
+@@ -167,7 +148,6 @@ PRODUCT_PACKAGES += \
+     SettingsIntelligenceGooglePrebuilt \
+     SetupWizardPrebuilt \
+     TurboPrebuilt \
+-    Velvet \
+     WellbeingPrebuilt \
+     EmergencyInfoGoogleNoUi \
+     Flipendo \
+-- 
+2.34.1
+
